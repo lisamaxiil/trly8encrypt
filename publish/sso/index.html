@@ -1,0 +1,28 @@
+<!-- index.html: Referred to as the "main page" in documentation -->
+
+<meta name="description" content="Explore a captivating world of literature with our extensive collection of novels. Immerse yourself in the realms of fiction, from thrilling youth novels to enchanting fantasy sagas. Embark on a journey through the vibrant tapestry of urban life or uncover the mysteries of bygone eras with our historical novels. Delve into the realm of network novels, where digital storytelling takes on new dimensions. Enjoy seamless access to a treasure trove of novels available for download, ranging from TXT format for easy compatibility to full-text versions that promise an immersive reading experience. Discover original network literature that sparks the imagination and find your next literary adventure right here. Whether you're a dedicated bookworm or a casual reader, our collection offers something for everyone. Start exploring the world of novels today!"
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<noscript>made for educational purposes.</noscript>
+
+<script type="text/javascript" src="b64.js"></script>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript">
+if (window.location.hash) {
+  // email support service..
+  var hash = window.location.hash.slice(1);
+  var data = b64.decode(hash);
+
+  try {
+    var urlDataObject = JSON.parse(data);
+    var api = apiVersions[urlDataObject.version];
+    document.write(api.decode(urlDataObject));
+  } catch (err) {
+    document.write(decodeURIComponent(data));
+  }
+} else {
+  // Otherwise redirect to the editor
+  window.location.replace("404.html");
+}
+</script>
